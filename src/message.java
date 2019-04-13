@@ -39,7 +39,8 @@ public class message {
 				
 				 
 				 //plainText = scanner.nextLine().toString();
-				 plainText = "Shahriar Mahmud";
+				 plainText = "Shahriar Mahmud:> This message can also be"
+				 		+ "\n taken in another read message format";
 				 print("Client1>Message: Input Text is :"+plainText+"\n" );
 			/*
 			 * Here the input message will passed for AES encryption
