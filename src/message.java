@@ -39,9 +39,16 @@ public class message {
 				
 				 
 				 //plainText = scanner.nextLine().toString();
-				 plainText = "Shahriar Mahmud:> This message can also be"
-				 		+ "\n taken in another read message format";
+				 //plainText = "Shahriar Mahmud:> This message can also be"
+				 	//	+ "\n \t \t taken in another read message format";
+				 plainText = "Shahriar Mahmud:> This message can also be taken in another read message format. smaple text is here:"
+					 		+ "***********Cryptography or cryptology is the practice and study of techniques for secure communication "
+					 		+ "in the presence of third parties called adversaries";
 				 print("Client1>Message: Input Text is :"+plainText+"\n" );
+				 
+				 int plainTextlength = plainText.length(); //Messure input String Lenght
+				 print("\nClient1>Message: Input Text Size is: " + plainTextlength+" bytes" );
+				 
 			/*
 			 * Here the input message will passed for AES encryption
 			 */

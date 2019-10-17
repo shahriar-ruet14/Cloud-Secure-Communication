@@ -22,8 +22,12 @@ public class EncryptionAES {
 		
 		print(("Cilent>message>Encryption>> : Final Plain Text is:"+ plainText));
 		
-		
+		long tic = System.nanoTime(); //Time Stamp 
 		String cipherText = encrypt(plainText,secretKey);
+		long toc = System.nanoTime(); //final time
+		long elapsedTime = toc - tic;
+		System.out.println("\nEnCryptionAES: Elapsed Time : "+ elapsedTime+ " ns\n \t \t \t OR " 
+		+ elapsedTime/1000000000+" Seconds");
 		System.out.println("\nClient1> message>EncriptionAES>> : Generated CipherText : " + cipherText);
 		
 		

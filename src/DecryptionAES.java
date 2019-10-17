@@ -16,9 +16,15 @@ public class DecryptionAES {
 	SecretKey secretKey = KeyStatic.key(); // Get existing Key
 	cipher = Cipher.getInstance("AES");
 	
-	//print("$$$$$$$$$$$$$$$$$$$$$$ Final  Save this time Allah $$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 	
+	long tic = System.nanoTime(); //Time Stamp
 	String decryptedText = decrypt(cipherText, secretKey);
+	long toc = System.nanoTime(); //final time
+	long elapsedTime = toc - tic;
+	System.out.println("\nDecryptionAES: Elapsed Time : "+ elapsedTime+" ns \n \t  \t OR " 
+	+ elapsedTime/1000000000+" Seconds");
+	
+	
 	print("\nClient1> message>DecriptionAES >> : Decrypted Final Text:\n\n\t\t" + decryptedText);
 	print("\n\n\n\n");
 		

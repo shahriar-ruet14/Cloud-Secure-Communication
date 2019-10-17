@@ -13,9 +13,19 @@ public class KeyStatic {
 			flag++;
 			
 			// secretKey = keyStatic();
-			 
-				 secretKey =KeyGenerator.getInstance("AES").generateKey();
+			
+			long tic = System.nanoTime(); //timestamp to measure time 
+			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+			keyGenerator.init(128);
+			  
+			secretKey = keyGenerator.generateKey();
+			
+			//secretKey =KeyGenerator.getInstance("AES").generateKey();
 				 //System.out.println("\n\n\nNew genrated: flag : "+flag+"\n");
+			long toc = System.nanoTime(); //timestamp
+			long elapsedTime = toc- tic; //Elapsed Time
+			System.out.println("\nKey Generation Elapsed Time : "+ elapsedTime +" ns \n\t\t\tOR "
+					+ elapsedTime/1000000000+" Seconds");
 		}
 		else {
 			flag++;
